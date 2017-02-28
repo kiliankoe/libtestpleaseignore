@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = "TestIgnore"
   s.version      = "0.2.0"
-  s.summary      = ""
+  s.summary      = "Foobar"
   s.description  = <<-DESC
     Your description here.
   DESC
-  s.homepage     = ""
+  s.homepage     = "https://github.com/kiliankoe/libtestpleaseignore"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "Kilian" => "" }
   s.social_media_url   = ""
