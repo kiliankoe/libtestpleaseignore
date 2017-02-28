@@ -31,7 +31,7 @@ class TestIgnoreTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //// XCTAssertEqual(TestIgnore().text, "Hello, World!")
-        XCTAssertEqual(Test.hello(), "Hello, World!")
+        XCTAssertEqual(Test.hello(), "Hello, World! Lat: 1.0, Lon: 1.0")
     }
 }
 
