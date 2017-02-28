@@ -24,7 +24,7 @@
 
 import Foundation
 import XCTest
-@testable import TestIgnore
+import TestIgnore
 
 class TestIgnoreTests: XCTestCase {
     func testExample() {
