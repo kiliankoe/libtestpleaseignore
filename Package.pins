@@ -1,0 +1,12 @@
+{
+  "autoPin": true,
+  "pins": [
+    {
+      "package": "gausskrueger",
+      "reason": null,
+      "repositoryURL": "https://github.com/kiliankoe/gausskrueger",
+      "version": "0.1.0"
+    }
+  ],
+  "version": 1
+}
