@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		393DF9131E65A4D400706B74 /* gausskrueger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BCE1B81E65997300805646 /* gausskrueger.framework */; };
 		39BCE1B91E65997300805646 /* gausskrueger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BCE1B81E65997300805646 /* gausskrueger.framework */; };
 		39BCE1BB1E65999B00805646 /* gausskrueger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BCE1BA1E65999B00805646 /* gausskrueger.framework */; };
 		39BCE1BD1E6599A200805646 /* gausskrueger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BCE1BC1E6599A200805646 /* gausskrueger.framework */; };
@@ -110,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				393DF9131E65A4D400706B74 /* gausskrueger.framework in Frameworks */,
 				DD7502881C68FEDE006590AF /* TestIgnore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -879,8 +881,12 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Configs/TestIgnoreTests.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks ${SRCROOT}/Carthage/Build/Mac/";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TestIgnore.TestIgnore-macOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -894,8 +900,12 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Configs/TestIgnoreTests.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks ${SRCROOT}/Carthage/Build/Mac/";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TestIgnore.TestIgnore-macOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
