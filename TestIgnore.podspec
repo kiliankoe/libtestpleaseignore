@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TestIgnore"
-  s.version      = "0.2.0"
+  s.version      = "0.3.0"
   s.summary      = "Foobar"
   s.description  = <<-DESC
     Your description here.
