@@ -24,13 +24,14 @@
 
 import Foundation
 import XCTest
-import TestIgnore
+@testable import TestIgnore
 
 class TestIgnoreTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         //// XCTAssertEqual(TestIgnore().text, "Hello, World!")
+        XCTAssertEqual(Test.hello(), "Hello, World!")
     }
 }
 
