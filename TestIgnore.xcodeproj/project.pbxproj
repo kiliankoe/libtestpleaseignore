@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		393DF9131E65A4D400706B74 /* gausskrueger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BCE1B81E65997300805646 /* gausskrueger.framework */; };
+		393DF9141E65A57400706B74 /* gausskrueger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BCE1BA1E65999B00805646 /* gausskrueger.framework */; };
 		39BCE1B91E65997300805646 /* gausskrueger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BCE1B81E65997300805646 /* gausskrueger.framework */; };
 		39BCE1BB1E65999B00805646 /* gausskrueger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BCE1BA1E65999B00805646 /* gausskrueger.framework */; };
 		39BCE1BD1E6599A200805646 /* gausskrueger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BCE1BC1E6599A200805646 /* gausskrueger.framework */; };
@@ -79,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				393DF9141E65A57400706B74 /* gausskrueger.framework in Frameworks */,
 				52D6D9871BEFF229002C0205 /* TestIgnore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +232,7 @@
 				52D6D9781BEFF229002C0205 /* Frameworks */,
 				52D6D9791BEFF229002C0205 /* Headers */,
 				52D6D97A1BEFF229002C0205 /* Resources */,
+				393DF9151E65A5A800706B74 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -463,6 +466,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		393DF9151E65A5A800706B74 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/gausskrueger.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		52D6D9771BEFF229002C0205 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -693,8 +713,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Configs/TestIgnoreTests.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks ${SRCROOT}/Carthage/Build/iOS/";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TestIgnore.TestIgnore-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -706,8 +730,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Configs/TestIgnoreTests.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks ${SRCROOT}/Carthage/Build/iOS/";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TestIgnore.TestIgnore-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
